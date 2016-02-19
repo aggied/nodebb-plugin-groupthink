@@ -1,0 +1,1 @@
+<!-- IMPORT groups/details.tpl --> 

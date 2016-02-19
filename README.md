@@ -1,0 +1,1 @@
+This plugin is an attempt to make NodeBB more of a group-based collaborative platform. 

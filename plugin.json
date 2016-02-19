@@ -1,0 +1,20 @@
+{
+	"id": "nodebb-plugin-groupthink",
+	"name": "NodeBB Groupthink",
+	"description": "NodeBB Plugin that changes NodeBB into a group-based social network",
+	"url": "https://github.com/aggied/nodebb-plugin-groupthink",
+	"library": "./library.js",
+    "templates": "./static/templates",
+	"hooks": [
+        { "hook": "static:app.load", "method": "onLoad" },
+        { "hook": "filter:admin.header.build", "method": "admin.menu" },	
+		{ "hook": "filter:group.create", "method": "groupCreate" },
+		{ "hook": "filter:category.get", "method": "getCategory" },
+		{ "hook": "filter:group.build", "method":"buildGroup"},
+		{ "hook": "filter:category.build", "method":"buildCategory"}
+	],
+	"scripts": [
+		"./static/js/client.js",
+		"./static/js/admin.js"
+	]
+}
